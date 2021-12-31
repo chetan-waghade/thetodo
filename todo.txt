@@ -1,3 +1,1 @@
-call realm on app.js
-convert it to string
-save it into redux
+..
