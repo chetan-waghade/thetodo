@@ -2,11 +2,9 @@ import React from 'react';
 import {StyleSheet, TouchableOpacity} from 'react-native';
 import {
   Text,
-  View,
   Pressable,
   HStack,
   Menu,
-  HamburgerIcon,
   Box,
   Modal,
   Select,
@@ -38,7 +36,7 @@ const TodoItem = props => {
     updateData(realm, {
       _id: props.data._id,
       title: props.data.title,
-      completed: true,
+      completed: !props.data.completed,
       category: props.data.category,
     });
   };
@@ -92,7 +90,12 @@ const TodoItem = props => {
                 </Pressable>
               );
             }}>
-            <Menu.Item>Edit </Menu.Item>
+            <Menu.Item
+              onPress={() => {
+                setShowModal(true);
+              }}>
+              Edit{' '}
+            </Menu.Item>
             <Menu.Item onPress={handleDelete}>Delete</Menu.Item>
           </Menu>
         </Box>

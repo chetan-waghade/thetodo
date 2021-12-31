@@ -1,13 +1,12 @@
 import React, {useEffect, useState} from 'react';
 
-import {View, Text} from 'native-base';
+import {View} from 'native-base';
 import {FlatList} from 'react-native';
 import {useSelector, useDispatch} from 'react-redux';
 import TodoItem from './TodoItem';
 
 import Realm from 'realm';
 import {TodosSchema} from '../db/schema';
-import {nanoid} from '@reduxjs/toolkit';
 
 import {fetchDataFromRealm, setDBInstance} from '../features/todosSlice';
 
