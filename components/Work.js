@@ -10,8 +10,6 @@ const Work = () => {
     state.todos.todos.filter(item => item.category === 'work'),
   );
 
-  workTodos.forEach(item => console.log(item));
-
   const renderItem = ({item}) => <TodoItem data={item} />;
   return (
     <View>
